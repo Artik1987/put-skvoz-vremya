@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "installedAt": "2026-10-31T05:49:29.511Z",
+  "files": {
+    "C:\\Users\\Artsiom\\OneDrive\\Рабочий стол\\ai-start\\put-skvoz-vremya\\.claude\\settings.json": {
+      "plugins": [
+        "ruflo-mods@ruflo",
+        "ruflo-swarm@ruflo",
+        "ruflo-console@ruflo"
+      ],
+      "marketplace": true,
+      "env": true,
+      "claudeInstalled": []
+    }
+  }
+}
