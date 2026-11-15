@@ -40,15 +40,31 @@
         .video-card {
             background: #fff; border-radius: 18px; overflow: hidden;
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            display: flex; flex-direction: column;
         }
         .video-thumb {
             height: 180px; background: linear-gradient(135deg, #1d1d1f, #434344);
             display: flex; align-items: center; justify-content: center;
             color: #fff; font-size: 40px;
         }
-        .video-info { padding: 16px; }
+        .video-info { padding: 16px; flex-grow: 1; display: flex; flex-direction: column; }
         .video-info h3 { margin: 0 0 8px; font-size: 17px; font-weight: 600; }
-        .video-info p { margin: 0; font-size: 14px; color: #86868b; }
+        .video-info p { margin: 0 0 15px; font-size: 14px; color: #86868b; flex-grow: 1; }
+        
+        /* Ссылки на видео (RU/EN) */
+        .video-links { display: flex; gap: 10px; margin-top: auto; }
+        .video-links a { 
+            display: inline-block; 
+            padding: 8px 12px; 
+            background: #f5f5f7; 
+            border-radius: 8px; 
+            font-size: 14px; 
+            font-weight: 600; 
+            color: #1d1d1f; 
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+        .video-links a:hover { background: #e8e8ed; }
 
         /* Гид для новичков */
         .steps { display: grid; gap: 16px; }
@@ -154,34 +170,41 @@
     <section>
         <h2 data-ru="Мультсериал" data-en="Cartoon Series">Мультсериал</h2>
         <div class="grid">
-            <a href="https://youtube.com/shorts/p3lTS2H-DQM?si=eVSmGQuno44qsnk1" target="_blank" class="video-card" style="text-decoration: none; color: inherit;">
-                <img src="bitcoin.jpg" alt="Как появился Биткоин?" style="width: 100%; height: 180px; object-fit: cover; border-radius: 18px 18px 0 0;">
+            <!-- Первая карточка с двумя языками -->
+            <div class="video-card">
+                <img src="bitcoin.jpg" alt="Как появился Биткоин?" style="width: 100%; height: 180px; object-fit: cover;">
                 <div class="video-info">
                     <h3 data-ru="Как появился Биткоин?" data-en="How Bitcoin Was Born?">Как появился Биткоин?</h3>
                     <p data-ru="История первой криптовалюты за 30 секунд." data-en="The history of the first cryptocurrency in 30 seconds.">История первой криптовалюты за 30 секунд.</p>
+                    <div class="video-links">
+                        <a href="https://youtube.com/shorts/p3lTS2H-DQM" target="_blank">🇷🇺 RU</a>
+                        <a href="https://youtube.com/shorts/6xIlen_9hrs" target="_blank">🇬🇧 EN</a>
+                    </div>
                 </div>
-            </a>
-            <a href="https://youtube.com/shorts/KxbDDmXU1oA?si=iSGLOrN5uRT-wA-K" target="_blank" class="video-card" style="text-decoration: none; color: inherit;">
-                <img src="gas.jpg" alt="Что такое газовые сборы?" style="width: 100%; height: 180px; object-fit: cover; border-radius: 18px 18px 0 0;">
+            </div>
+            
+            <!-- Остальные карточки -->
+            <a href="https://youtube.com/shorts/KxbDDmXU1oA" target="_blank" class="video-card" style="text-decoration: none; color: inherit;">
+                <img src="gas.jpg" alt="Что такое газовые сборы?" style="width: 100%; height: 180px; object-fit: cover;">
                 <div class="video-info">
                     <h3 data-ru="Что такое газовые сборы?" data-en="What Are Gas Fees?">Что такое газовые сборы?</h3>
                     <p data-ru="Простое объяснение комиссий в блокчейне." data-en="A simple explanation of blockchain fees.">Простое объяснение комиссий в блокчейне.</p>
                 </div>
             </a>
-            <a href="https://youtube.com/shorts/a7LA0qWj6Sc?si=ICT2codlVqlWuZii" target="_blank" class="video-card" style="text-decoration: none; color: inherit;">
-                <img src="mistakes.jpg" alt="3 ошибки новичков" style="width: 100%; height: 180px; object-fit: cover; border-radius: 18px 18px 0 0;">
+            <a href="https://youtube.com/shorts/a7LA0qWj6Sc" target="_blank" class="video-card" style="text-decoration: none; color: inherit;">
+                <img src="mistakes.jpg" alt="3 ошибки новичков" style="width: 100%; height: 180px; object-fit: cover;">
                 <div class="video-info">
                     <h3 data-ru="3 ошибки новичков" data-en="3 Beginner Mistakes">3 ошибки новичков</h3>
                     <p data-ru="Как не потерять деньги на бирже." data-en="How not to lose money on an exchange.">Как не потерять деньги на бирже.</p>
                 </div>
             </a>
-            <a href="https://youtube.com/shorts/9zExvdTF0aQ?si=aRrUbwNxzHbCO7xR" target="_blank" class="video-card" style="text-decoration: none; color: inherit;">
-                <img src="liquidation.jpg" alt="Ликвидация: как потерять $16 млн" style="width: 100%; height: 180px; object-fit: cover; border-radius: 18px 18px 0 0;">
+            <a href="https://youtube.com/shorts/9zExvdTF0aQ" target="_blank" class="video-card" style="text-decoration: none; color: inherit;">
+                <img src="liquidation.jpg" alt="Ликвидация: как потерять $16 млн" style="width: 100%; height: 180px; object-fit: cover;">
                 <div class="video-info">
                     <h3 data-ru="Ликвидация: как потерять $16 млн" data-en="Liquidation: How to Lose $16M">Ликвидация: как потерять $16 млн</h3>
                     <p data-ru="Урок риск-менеджмента для трейдеров." data-en="A risk management lesson for traders.">Урок риск-менеджмента для трейдеров.</p>
                 </div>
-            </a>8
+            </a>
         </div>
     </section>
     
@@ -244,6 +267,7 @@
         <h2 data-ru="Мои Telegram-каналы" data-en="My Telegram Channels">Мои Telegram-каналы</h2>
         <div class="links-list">
             <a href="https://t.me/c/4496056121/17" target="_blank" class="btn-link" data-ru="📈 Крипто-сигналы" data-en="📈 Crypto Signals">📈 Крипто-сигналы</a>
+            <!-- Не забудь заменить ссылку на новостной канал, когда он появится -->
             <a href="https://t.me/ваш_новостной_канал" target="_blank" class="btn-link" data-ru="📰 Крипто-новости" data-en="📰 Crypto News">📰 Крипто-новости</a>
         </div>
     </section>
